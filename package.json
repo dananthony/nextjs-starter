@@ -1,31 +1,31 @@
 {
-  "name": "nextjs-starter",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "browserslist": [
-    "extends @acolorbright/browserslist-config"
-  ],
-  "dependencies": {
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@acolorbright/browserslist-config": "1.0.3",
-    "@types/node": "18.15.5",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "postcss-custom-media": "9.1.2",
-    "postcss-flexbugs-fixes": "5.0.2",
-    "postcss-preset-env": "7.8.3",
-    "typescript": "5.0.2"
-  }
+	"name": "nextjs-starter",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "nvm-guard && next dev",
+		"build": "nvm-guard && next build",
+		"start": "nvm-guard && next start",
+		"lint": "next lint"
+	},
+	"browserslist": [
+		"extends @acolorbright/browserslist-config"
+	],
+	"dependencies": {
+		"next": "13.2.4",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@acolorbright/browserslist-config": "1.0.3",
+		"@types/node": "18.15.5",
+		"@types/react": "18.0.28",
+		"@types/react-dom": "18.0.11",
+		"eslint": "8.36.0",
+		"eslint-config-next": "13.2.4",
+		"nvm-guard": "1.0.4",
+		"postcss-custom-media": "9.1.2",
+		"postcss-flexbugs-fixes": "5.0.2",
+		"postcss-preset-env": "7.8.3",
+		"typescript": "5.0.2"
+	}
 }
