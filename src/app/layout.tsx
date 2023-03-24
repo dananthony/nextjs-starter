@@ -1,8 +1,8 @@
-import "@css/global.css";
+import '@css/global.css';
 
 export const metadata = {
-  title: "Next.js Starter",
-  description: "An opinionated Next.js starter template.",
+  title: 'Next.js Starter',
+  description: 'An opinionated Next.js starter template.',
 };
 
 export default function RootLayout({
