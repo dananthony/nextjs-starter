@@ -5,7 +5,20 @@
     "dev": "nvm-guard && next dev",
     "build": "nvm-guard && next build",
     "start": "nvm-guard && next start",
-    "lint": "next lint"
+    "prettier": "nvm-guard prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "eslint": "nvm-guard eslint --fix 'src/**/*.{ts,tsx,js,jsx}'",
+    "stylelint": "nvm-guard stylelint --fix 'src/**/*.css'",
+    "prepare": "husky install",
+    "type-check": "nvm-guard && tsc"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
   },
   "dependencies": {
     "next": "13.2.4",
@@ -13,6 +26,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.5.0",
+    "@commitlint/config-conventional": "17.4.4",
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -20,7 +35,9 @@
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.3",
     "install": "0.13.0",
+    "lint-staged": "13.2.0",
     "npm": "9.6.2",
     "nvm-guard": "1.0.4",
     "postcss-custom-media": "9.1.2",
