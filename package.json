@@ -12,15 +12,6 @@
     "type-check": "nvm-guard && tsc",
     "test": "nvm-guard && jest --passWithNoTests"
   },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "prettier --write",
-      "next lint --fix --file"
-    ],
-    "*.css": [
-      "stylelint --fix"
-    ]
-  },
   "dependencies": {
     "next": "13.2.4",
     "react": "18.2.0",
