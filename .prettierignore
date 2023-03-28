@@ -1,9 +1,9 @@
-logs
-*.log
+# dependencies
 package-lock.json
-node_modules/
-.cache/
-public
-*.png
-.git
-.nvmrc
+
+# next.js
+/.next
+/out
+
+# production
+/build

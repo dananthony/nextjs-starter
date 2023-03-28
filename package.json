@@ -5,16 +5,16 @@
     "dev": "nvm-guard && next dev",
     "build": "nvm-guard && next build",
     "start": "nvm-guard && next start",
-    "prettier": "nvm-guard prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
-    "eslint": "nvm-guard eslint --fix 'src/**/*.{ts,tsx,js,jsx}'",
-    "stylelint": "nvm-guard stylelint --fix 'src/**/*.css'",
+    "lint": "nvm-guard && next lint",
+    "stylelint": "nvm-guard && stylelint 'src/**/*.css'",
+    "prettier": "nvm-guard && prettier --check 'src/**/*.{ts,tsx,js,jsx}'",
     "prepare": "husky install",
     "type-check": "nvm-guard && tsc"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",
-      "eslint --fix"
+      "next lint --fix --file"
     ],
     "*.css": [
       "stylelint --fix"

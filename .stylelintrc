@@ -5,7 +5,6 @@
   ],
   "rules": {
     "at-rule-no-unknown": true,
-    "color-hex-case": "lower",
     "color-no-invalid-hex": true,
     "selector-id-pattern": null
   }
