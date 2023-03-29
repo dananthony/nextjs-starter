@@ -7,5 +7,6 @@
     "at-rule-no-unknown": true,
     "color-no-invalid-hex": true,
     "selector-id-pattern": null
-  }
+  },
+  "ignoreFiles": ["!src/**/*.css"]
 }

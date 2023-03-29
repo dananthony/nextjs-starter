@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "scripts": {
     "prepare": "husky install",
+    "preinstall": "nvm-guard",
     "dev": "nvm-guard && next dev",
     "build": "nvm-guard && next build",
     "start": "nvm-guard && next start",
     "lint": "nvm-guard && next lint",
-    "stylelint": "nvm-guard && stylelint 'src/**/*.css'",
-    "prettier": "nvm-guard && prettier --check 'src/**/*.{ts,tsx,js,jsx}'",
+    "stylelint": "nvm-guard && stylelint .",
+    "prettier": "nvm-guard && prettier --ignore-unknown --check .",
     "type-check": "nvm-guard && tsc",
-    "test": "nvm-guard && jest --passWithNoTests"
+    "test": "nvm-guard && jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "validate": "npm test && npm run lint && npm run stylelint && npm run prettier"
   },
   "dependencies": {
     "next": "13.2.4",
